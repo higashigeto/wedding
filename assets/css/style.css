@@ -1,0 +1,269 @@
+::root {
+    --background-color: #eee;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body * {
+    font-family: serif;
+}
+a {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    width: auto;
+    height: auto;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+:is(h1, h2, h3, h4, h5, h6) {
+    font-size: 1rem;
+}
+article > :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+article > :is(h1, h2, h3, h4, h5, h6)::after {
+    content: '';
+    border-bottom: solid .1rem #aaa;
+}
+/* header {
+    background-color: #C5F8B2;
+} */
+header .main_visual {
+    width: 100vw;
+}
+header .logo_area {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1rem;
+}
+header .logo_area img {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+header nav ul {
+    text-align: center;
+}
+header nav ul li {
+    display: inline-block;
+    padding: .6rem 1rem;
+}
+header nav ul li a {
+    margin: .6rem 1rem;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+header nav ul li a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+}
+header nav ul li a:hover::after {
+transform: scale(1, 1);
+}
+main {
+    width: 88vw;
+    margin: 0 auto;
+}
+.wedding_type {
+    display: flex;
+    flex-wrap: wrap;
+}
+main .wedding_type div {
+    border: solid 1px #aaa;
+    border-radius: .5rem;
+    width: calc(33.33333% - 2px);
+    margin: 0.05rem;
+    display: flex;
+    align-items: center;
+}
+.wedding_type figure {
+    padding: 1rem 0.5rem;
+    width: 30%;
+}
+.wedding_type_photo {
+    display: flex;
+}
+.wedding_type_photo div {
+    width: calc(33.33333% - 1.6rem);
+    margin: 1rem;
+}
+.wedding_type_photo div img {
+    border-radius: 1rem;
+}
+.wedding_type_custom {
+    display: flex;
+}
+.wedding_type_custom div {
+    width: calc(66% - 1.6rem);
+    margin: 1rem;
+}
+.wedding_type_custom div img {
+    border-radius: 1rem;
+}
+.wedding_column ul li {
+    line-height: 1.4;
+    border-bottom: 1px solid #ccc;
+    list-style-position: inside;
+    padding: 1rem 0 0.5rem 1rem;
+}
+.wedding_column ul li a {
+    display: initial;
+}
+.wedding_column ul li span {
+    padding: 0 0.5rem 0 0;
+}
+footer {
+    width: 100vw;
+}
+footer article {
+    padding: 2.875rem 0;
+}
+footer .region {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+footer .access {
+    padding: 0 2rem;
+}
+footer .access ul li {
+    list-style: none;
+}
+footer .product p {
+    text-align: center;
+}
+footer .sns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .sns img{
+    width: 2.875rem;
+    height: 2.875rem;
+    margin: 1rem;
+}
+footer iframe {
+    width: 18.75rem;
+    height: 18.75rem;
+}
+@media screen and (max-width:60rem) {
+html.is-fixed,
+html.is-fixed body {
+height: 100%;
+overflow: hidden;
+}
+header nav ul li {
+    display: block;
+    padding: 0.6rem 1rem;
+    border-bottom: 0.2rem solid #ddd;
+}
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.ham_btn{
+    position: absolute;
+    background: #DBB82E;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 10;
+}
+
+/*ボタン内側*/
+.ham_btn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+}
+
+
+.ham_btn span:nth-of-type(1) {
+    top:15px; 
+    width: 45%;
+}
+
+.ham_btn span:nth-of-type(2) {
+    top:23px;
+    width: 35%;
+}
+
+.ham_btn span:nth-of-type(3) {
+    top:31px;
+    width: 20%;
+}
+
+/*activeクラスが付与されると線が回転して×になる*/
+
+.ham_btn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+}
+
+.ham_btn.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.ham_btn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+}
+.ham_area {
+    display: none;
+}
+.ham_area.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #aaa;
+
+}
+}
+@media screen and (max-width:47.9rem) {
+    footer iframe {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+    }
+    main .wedding_type div {
+        width: calc(50% - 2px);
+    }
+    .wedding_type_photo {
+        display: block;
+    }
+    .wedding_type_photo div {
+        width: 100%;
+        margin: 0;
+    }
+}
