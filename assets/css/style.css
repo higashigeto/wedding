@@ -71,7 +71,7 @@ header nav ul li a::after {
     content: '';
     width: 100%;
     height: 2px;
-    background: rgb(0, 0, 0);
+    background: rgb(218, 147, 81);
     transform: scale(0, 1);
     transform-origin: center top;
     transition: transform .3s;
