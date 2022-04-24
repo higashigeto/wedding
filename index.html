@@ -85,7 +85,7 @@
                 </div>
             </section>
         </article>
-        <article>
+        <article class="fadeInRight">
             <h2 id="2">会場案内</h2>
             <section class="wedding_type_photo">
                 <div class="photo_one">
@@ -111,7 +111,7 @@
                 </div>
             </section>
         </article>
-        <article>
+        <article class="fadeInLeft">
             <h2 id="3">お食事プラン</h2>
             <section class="wedding_type_custom">
                 <div class="wasou">
@@ -171,11 +171,13 @@
             duration: 2000,
             delay: 200,
         });
-        ScrollReveal().reveal('.wasou', {delay: 200, origin: 'bottom', reset: false });
-        ScrollReveal().reveal('.yousou', {delay: 400, origin: 'bottom', reset: false });
-        ScrollReveal().reveal('.photo_one', {delay: 200, origin: 'bottom', reset: false });
-        ScrollReveal().reveal('.photo_two', {delay: 400, origin: 'bottom', reset: false });
-        ScrollReveal().reveal('.photo_three', {delay: 600, origin: 'bottom', reset: false });
+        //ScrollReveal().reveal('.fadeInRight', {delay: 600, origin: 'right', reset: false });
+        //ScrollReveal().reveal('.fadeInLeft', {delay: 600, origin: 'left', reset: false });
+        ScrollReveal().reveal('.wasou', {delay: 1800, origin: 'bottom', reset: false });
+        ScrollReveal().reveal('.yousou', {delay: 2000, origin: 'bottom', reset: false });
+        ScrollReveal().reveal('.photo_one', {delay: 1800, origin: 'bottom', reset: false });
+        ScrollReveal().reveal('.photo_two', {delay: 2000, origin: 'bottom', reset: false });
+        ScrollReveal().reveal('.photo_three', {delay: 2200, origin: 'bottom', reset: false });
     </script>
 </body>
 </html>

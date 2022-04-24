@@ -1,13 +1,30 @@
-::root {
+/* :root {
+    --main-color: #fffce2;
     --background-color: #eee;
+    --box-shadow: 0 0 1.5rem 0 #dbffcd;
+} */
+html {
+    background: var(--main-color);
+    height: 100vw;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body * {
     font-family: serif;
+}
+body {
+    overflow-x: hidden;
+}
+.fadeInLeft {
+    background: #fff;
+    box-shadow: var( --box-shadow);
+    border-radius: 0.3rem;
+}
+.fadeInRight {
+    background: #fff;
+    box-shadow: var( --box-shadow);
+    border-radius: 0.3rem;
 }
 a {
     color: blue;
@@ -33,9 +50,6 @@ article > :is(h1, h2, h3, h4, h5, h6)::after {
     content: '';
     border-bottom: solid .1rem #aaa;
 }
-/* header {
-    background-color: #C5F8B2;
-} */
 header .main_visual {
     width: 100vw;
 }
@@ -83,6 +97,9 @@ main {
     width: 88vw;
     margin: 0 auto;
 }
+main article {
+    margin: 3.75rem 0;
+}
 .wedding_type {
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +114,10 @@ main .wedding_type div {
 }
 .wedding_type figure {
     padding: 1rem 0.5rem;
-    width: 30%;
+    width: 30vw;
+}
+.wedding_type h2 {
+    width: 70vw;
 }
 .wedding_type_photo {
     display: flex;
