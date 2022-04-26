@@ -27,11 +27,11 @@ $('.ham_btn').click(function () {
     $('.ham_area').toggleClass('active');
 });
 $(function () {
-  $('.ham_btn').click(function () {　  // トリガーをクリックした時の条件分岐
-    if ($('html').hasClass('is-fixed')) {  // ナビを閉じるときの処理
-      $('html').removeClass('is-fixed');  // 背景固定解除！
-    } else {                              // ナビを開くときの処理
-      $('html').addClass('is-fixed');     // 背景固定！
-    }
-  });
+	$('.ham_btn').click(function () {　  // トリガーをクリックした時の条件分岐
+		if ($('html').hasClass('is-fixed')) {  // ナビを閉じるときの処理
+		$('html').removeClass('is-fixed');  // 背景固定解除！
+		} else {                              // ナビを開くときの処理
+		$('html').addClass('is-fixed');     // 背景固定！
+		}
+	});
 });
