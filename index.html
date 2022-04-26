@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link data-n-head="ssr" rel="shortcut icon" type="image/png" href="assets/img/logo.png">
-    <title>test</title>
+    <title>wedding portfolio site</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
     <script src="./assets/js/main.js" defer></script>
@@ -36,9 +36,9 @@
             </section>
             <section class="main_visual">
                 <picture>
-                    <source srcset="assets/img/wedding/3.png" media="(min-width: 1728px)" />
-                    <source srcset="assets/img/wedding/3.png" media="(min-width: 1000px)" />
-                    <img src="assets/img/wedding_sp/7.png" />
+                    <source class="lazy" srcset="assets/img/wedding/3.png" media="(min-width: 1728px)" />
+                    <source class="lazy" srcset="assets/img/wedding/3.png" media="(min-width: 1000px)" />
+                    <img class="lazy" src="assets/img/wedding_sp/7.png" />
                 </picture>
             </section>
         <article>
@@ -81,7 +81,7 @@
                     <figure>
                         <img src="assets/img/6.png">
                     </figure>
-                    <h2>結婚式に合わせたアクセサリーをご用意（希望により購入可能）</h2>
+                    <h2>結婚式に合わせたアクセサリーをご用意<span>（希望により購入可能）</span></h2>
                 </div>
             </section>
         </article>
@@ -171,13 +171,16 @@
             duration: 2000,
             delay: 200,
         });
-        //ScrollReveal().reveal('.fadeInRight', {delay: 600, origin: 'right', reset: false });
-        //ScrollReveal().reveal('.fadeInLeft', {delay: 600, origin: 'left', reset: false });
-        ScrollReveal().reveal('.wasou', {delay: 1800, origin: 'bottom', reset: false });
-        ScrollReveal().reveal('.yousou', {delay: 2000, origin: 'bottom', reset: false });
-        ScrollReveal().reveal('.photo_one', {delay: 1800, origin: 'bottom', reset: false });
-        ScrollReveal().reveal('.photo_two', {delay: 2000, origin: 'bottom', reset: false });
-        ScrollReveal().reveal('.photo_three', {delay: 2200, origin: 'bottom', reset: false });
+        ScrollReveal().reveal('.wasou', {delay: 200, origin: 'bottom', reset: false });
+        ScrollReveal().reveal('.yousou', {delay: 400, origin: 'bottom', reset: false });
+        ScrollReveal().reveal('.photo_one', {delay: 200, origin: 'bottom', reset: false });
+        ScrollReveal().reveal('.photo_two', {delay: 400, origin: 'bottom', reset: false });
+        ScrollReveal().reveal('.photo_three', {delay: 600, origin: 'bottom', reset: false });
+    </script>
+    <script src="assets/js/lazyload.min.js"></script>
+    <script>
+    let images = document.querySelectorAll(".lazyload");
+        lazyload(images);
     </script>
 </body>
 </html>
